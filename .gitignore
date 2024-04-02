@@ -23,7 +23,7 @@
 # Compiled Static libraries
 *.lai
 *.la
-*.a
+bin/*.a
 *.lib
 
 # Executables
@@ -36,3 +36,5 @@
 
 third_party/eigen-3.4.0
 third_party/matplotlib-cpp-master
+
+!third_party/exsyx_64/lib/libexsyx.a
