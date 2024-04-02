@@ -7,12 +7,11 @@ project(planning
 )
 
 set(CMAKE_CXX_STANDARD 17)
-
 enable_testing()
 
 
 # 变量设置
-# set(CMMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
+# set(CMMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin) # Windows上使用
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 # set(LIBRARY_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
@@ -20,11 +19,10 @@ set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 set(Process_Dir ${CMAKE_SOURCE_DIR}/src/process)
 set(Pnc_Map_Dir ${CMAKE_SOURCE_DIR}/src/pnc_map)
-
+set(Show_Result_Dir ${CMAKE_SOURCE_DIR}/src/show_result)
 
 set(EasyX_Inc_Dir ${CMAKE_SOURCE_DIR}/third_party/easyx_64/include)
 set(EasyX_Lib_Dir ${CMAKE_SOURCE_DIR}/third_party/easyx_64/lib)
-set(Show_Result_Dir ${CMAKE_SOURCE_DIR}/src/show_result)
 
 set(EIGEN3_INCLUDE_DIR ${CMAKE_SOURCE_DIR}/third_party/eigen-3.4.0)
 list(APPEND CMAKE_MODULE_PATH ${EIGEN3_INCLUDE_DIR}/cmake)
@@ -34,8 +32,8 @@ if(TARGET Eigen3::Eigen)
     message("***********************Eigen3 found***********************")
 endif()
 
-
-
 # 添加子目录
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 add_subdirectory(${CMAKE_SOURCE_DIR}/test/map_test)
+add_subdirectory(${CMAKE_SOURCE_DIR}/test/matplot_test)
+
