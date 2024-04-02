@@ -32,8 +32,16 @@ if(TARGET Eigen3::Eigen)
     message("***********************Eigen3 found***********************")
 endif()
 
+
+set(Python_Dir D:/anaconda3/include)
+set(Numpy_Dir D:/anaconda3/Lib/site-packages/numpy/core/include)
+set(Python_Lib D:/anaconda3/libs/python39.lib)
+# set(Numpy_Lib D:/anaconda3/Lib/site-packages/numpy/core/lib/npymath.lib)
+
 # 添加子目录
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
 add_subdirectory(${CMAKE_SOURCE_DIR}/test/map_test)
 add_subdirectory(${CMAKE_SOURCE_DIR}/test/matplot_test)
-
+add_subdirectory(${CMAKE_SOURCE_DIR}/test/A_star_test)
+add_subdirectory(${CMAKE_SOURCE_DIR}/test/Q_learning_test)
+add_subdirectory(${CMAKE_SOURCE_DIR}/test/DWA_test)

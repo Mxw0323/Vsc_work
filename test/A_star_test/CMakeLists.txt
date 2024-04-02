@@ -1,6 +1,6 @@
-project(matplot_test)
+project(A_star_test)
 
-add_executable(${PROJECT_NAME} matplot_test.cpp)
+add_executable(${PROJECT_NAME} A_star.cc main.cc)
 
 set(Matplot_Cpp_Dir ${CMAKE_SOURCE_DIR}/third_party/matplotlib-cpp-master)
 
@@ -18,6 +18,6 @@ ${Python_Lib}
 )
 
 add_test(
-    NAME matplot_Cpp_test
+    NAME A_star_test
     COMMAND ${PROJECT_NAME}
 )
