@@ -8,6 +8,9 @@ project(planning
 
 set(CMAKE_CXX_STANDARD 17)
 
+enable_testing()
+
+
 # 变量设置
 # set(CMMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
@@ -35,3 +38,4 @@ endif()
 
 # 添加子目录
 add_subdirectory(${CMAKE_SOURCE_DIR}/src)
+add_subdirectory(${CMAKE_SOURCE_DIR}/test/map_test)
